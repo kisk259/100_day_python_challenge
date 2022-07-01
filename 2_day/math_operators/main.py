@@ -10,10 +10,3 @@ num_weight = float(weight)
 result = num_weight / (num_height ** 2)
 print(int(result))
 
-
-
-
-
-
-
-
