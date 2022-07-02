@@ -7,9 +7,11 @@ for n in range(0, len(student_heights)):
 
 #Write your code below this row 👇
 sum = 0
+lenght = 0
 for i in student_heights:
   sum += i
+  lenght += 1
 
-average = round(sum / len(student_heights))
+average = round(sum / lenght)
 
 print(average)
