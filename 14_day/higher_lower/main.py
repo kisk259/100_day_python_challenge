@@ -14,21 +14,26 @@ def compare(person_1, person_2):
     p2_follower_count = person_2['follower_count']
 
     if p1_follower_count > p2_follower_count:
-        return False
+        return "A"
     elif p1_follower_count < p2_follower_count:
-        return True
+        return "B"
 
+def printing(p):
+    return print(f"Compare A: {p['name']}, a {p['description']}, from {p['country']}")
 
 def game():
     run_game = True
+    print(logo)
     while run_game:
         p1 = choose_random_person()
         p2 = choose_random_person()
         if p1 == p2:
             p2 = choose_random_person()
-        print(logo)
-        print(f"Compare A: {p1['name']}, a {p1['description']}, from {p1['country']}")
+        printing(p1)
         print(vs)
-        print(f"Compare A: {p2['name']}, a {p2['description']}, from {p2['country']}")
+        printing(p2)
         answer = input("Who has more followers? Type 'A' or 'B': ")
-        compare(p1, p2)
+        if compare(p1, p2) == "p1":
+
+
+game()
